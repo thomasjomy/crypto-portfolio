@@ -1,0 +1,28 @@
+server:
+  port: 8097
+
+spring:
+  application:
+    name: portfolio-client
+  security:
+    oauth2:
+      client:
+        registration:
+          crypto-portfolio:
+            client-id: portfolio-client
+            client-secret: 3qBY4VDOpfIBcEZMYLEJjH2Xguzgzgfb
+            client-name: Crypto Portfolio
+            redirect-uri: http://localhost:8097/login/oauth2/code/crypto-portfolio
+            authorization-grant-type: authorization_code
+            scope: openid
+            provider: keycloak
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8090/realms/crypto-portfolio
+
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
