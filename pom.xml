@@ -13,5 +13,6 @@
     <modules>
         <module>crypto-authorization</module>
         <module>portfolio-client</module>
+        <module>portfolio-service</module>
     </modules>
 </project>
